@@ -29,7 +29,10 @@
       border-radius: 50px;
       margin-right: 16px;
     }
-
+    .navbar-end input{
+      outline: none;
+      padding-left: 10px;
+    }
     .fa-solid {
       padding-right: 7px;
     }
@@ -71,7 +74,9 @@
       width: 40%;
       border: solid 1px rgba(29, 29, 29, 0.307);
     }
-
+    .mobile-btn{
+      display: none;
+    }
     @media screen and (max-width: 576px) {
       .nav-desktop {
         display: none;
@@ -83,6 +88,13 @@
 
       .extra {
         display: none;
+      }
+
+      .pc-btn {
+        display: none;
+      }
+      .mobile-btn{
+         display: block;
       }
     }
   </style>
@@ -303,8 +315,8 @@
           </p>
         </div>
         <div>
-          <!-- <div class="text-5xl font-bold">29 <span>&#8942</span> 15 <span>&#8942</span> 25 <span>&#8942</span> 08
-             </div> -->
+          <div class="text-5xl font-bold">29 <span>&#8942</span> 15 <span>&#8942</span> 25 <span>&#8942</span> 08
+          </div>
           <div class="flex gap-12">
             <li class="list-none pl-2">Days</li>
             <li class="list-none pl-2">Hours</li>
@@ -333,7 +345,8 @@
               <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
             </div>
             <div class="card-actions">
-              <a class="text-red-500 cursor-pointer" onclick="my_modal_5.showModal()">Details</a>
+              <a class="text-red-500 cursor-pointer pc-btn" onclick="my_modal_5.showModal()">Details</a>
+              <a class="text-red-500 cursor-pointer mobile-btn">Details</a>
             </div>
           </div>
 
@@ -345,8 +358,9 @@
               </figure>
               <div class="card-body items-center text-center">
                 <h2 class="card-title">12.90$ - 18.85$</h2>
-                <hr class="hr1" />
                 <p>Apple</p>
+                <p class="text-center text-xs pb-5">Professional employees are there for you to pick the most <br>
+                  amazing and fresh fruits</p>
                 <div class="rating mb-2">
                   <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
                   <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
@@ -356,7 +370,7 @@
                 </div>
                 <div class="flex justify-center items-center gap-3">
                   <button class="btn">Close</button>
-                  <button class="btn bg-[#F85559]">Buy Now</button>
+                  <button class="btn bg-[#F85559] text-white">Buy Now</button>
                 </div>
               </div>
             </form>
@@ -381,9 +395,35 @@
               <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
             </div>
             <div class="card-actions">
-              <a class="text-red-500" href="">Details</a>
+              <a class="text-red-500 cursor-pointer pc-btn" onclick="my_modal_6.showModal()">Details</a>
+              <a class="text-red-500 cursor-pointer mobile-btn">Details</a>
             </div>
           </div>
+          <!-- modal -->
+          <dialog id="my_modal_6" class="modal modal-bottom sm:modal-middle">
+            <form method="dialog" class="modal-box">
+              <figure class="px-10 pt-10">
+                <img src="images/fruit7.png" class="rounded-xl" />
+              </figure>
+              <div class="card-body items-center text-center">
+                <h2 class="card-title">12.90$ - 18.85$</h2>
+                <p>Orange</p>
+                <p class="text-center text-xs pb-5">Professional employees are there for you to pick the most <br>
+                  amazing and fresh fruits</p>
+                <div class="rating mb-2">
+                  <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                  <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
+                  <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                  <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                  <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                </div>
+                <div class="flex justify-center items-center gap-3">
+                  <button class="btn">Close</button>
+                  <button class="btn bg-[#F85559] text-white">Buy Now</button>
+                </div>
+              </div>
+            </form>
+          </dialog>
         </div>
         <!-- 3rd card -->
         <div class="card md:w-72 lg:w-64 bg-base-100 shadow-xl">
@@ -402,9 +442,35 @@
               <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
             </div>
             <div class="card-actions">
-              <a class="text-red-500" href="">Details</a>
+              <a class="text-red-500 cursor-pointer pc-btn" onclick="my_modal_7.showModal()">Details</a>
+              <a class="text-red-500 cursor-pointer mobile-btn">Details</a>
             </div>
           </div>
+          <!-- modal -->
+          <dialog id="my_modal_7" class="modal modal-bottom sm:modal-middle">
+            <form method="dialog" class="modal-box">
+              <figure class="px-10 pt-10">
+                <img src="images/fruit8.png" class="rounded-xl" />
+              </figure>
+              <div class="card-body items-center text-center">
+                <h2 class="card-title">12.90$ - 18.85$</h2>
+                <p>Dragon</p>
+                <p class="text-center text-xs pb-5">Professional employees are there for you to pick the most <br>
+                  amazing and fresh fruits</p>
+                <div class="rating mb-2">
+                  <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                  <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
+                  <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                  <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                  <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                </div>
+                <div class="flex justify-center items-center gap-3">
+                  <button class="btn">Close</button>
+                  <button class="btn bg-[#F85559] text-white">Buy Now</button>
+                </div>
+              </div>
+            </form>
+          </dialog>
         </div>
         <!-- 4th card -->
         <div class="card md:w-72 lg:w-64 bg-base-100 shadow-xl">
@@ -423,9 +489,35 @@
               <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
             </div>
             <div class="card-actions">
-              <a class="text-red-500" href="">Details</a>
+              <a class="text-red-500 cursor-pointer pc-btn" onclick="my_modal_8.showModal()">Details</a>
+              <a class="text-red-500 cursor-pointer mobile-btn">Details</a>
             </div>
           </div>
+          <!-- modal -->
+          <dialog id="my_modal_8" class="modal modal-bottom sm:modal-middle">
+            <form method="dialog" class="modal-box">
+              <figure class="px-10 pt-10">
+                <img src="images/fruit9.png" class="rounded-xl" />
+              </figure>
+              <div class="card-body items-center text-center">
+                <h2 class="card-title">12.90$ - 18.85$</h2>
+                <p>Bananna</p>
+                <p class="text-center text-xs pb-5">Professional employees are there for you to pick the most <br>
+                  amazing and fresh fruits</p>
+                <div class="rating mb-2">
+                  <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                  <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
+                  <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                  <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                  <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                </div>
+                <div class="flex justify-center items-center gap-3">
+                  <button class="btn">Close</button>
+                  <button class="btn bg-[#F85559] text-white">Buy Now</button>
+                </div>
+              </div>
+            </form>
+          </dialog>
         </div>
       </div>
       <div class="flex justify-center items-center md:mt-24 lg:mt-0">
@@ -450,7 +542,7 @@
 
             <!-- section 3 card -->
             <div
-              class="flex flex-col md:grid md:grid-cols-2 lg:grid-cols-4 lg:gap-2 md:gap-44 absolute lg:w-[1000px] justify-around left-[140px] lg:left-36 -mt-[460px] md:-mt-[410px] md:pl-6 lg:-mt-20">
+              class="flex flex-col md:grid md:grid-cols-2 lg:grid-cols-4 lg:gap-2 md:gap-44 absolute lg:w-[1000px] justify-around left-[140px] lg:left-36 -mt-[460px] md:-mt-[410px] md:pl-2 lg:-mt-20">
               <!-- 1st card Start-->
               <div>
                 <img class="md:mb-5 lg:mx-auto" src="images/member1.png" />
@@ -629,7 +721,7 @@
   <!-- Main End -->
 
   <!-- Footer Start -->
-  <footer class="footer footer-center p-10 bg-[#262626] text-primary-content text-white">
+  <footer class="footer footer-center p-10 bg-[#262626] text-primary-content text-white lg:mt-10">
     <div>
       <div class="flex justify-center items-center gap-2">
         <img class="w-7" src="images/logo.png" />
