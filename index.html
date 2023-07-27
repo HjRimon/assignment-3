@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="cupcake">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -10,7 +11,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet" />
   <!-- fonts link -->
   <!-- FavIcon -->
-  <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
+  <link rel="shortcut icon" href="images/logo.png" type="image/x-icon" />
   <!-- FavIcon -->
   <link href="https://cdn.jsdelivr.net/npm/daisyui@3.4.0/dist/full.css" rel="stylesheet" type="text/css" />
   <script src="https://cdn.tailwindcss.com"></script>
@@ -30,10 +31,16 @@
       border-radius: 50px;
       margin-right: 16px;
     }
-    .navbar-end input{
+
+    input {
+      outline: none;
+    }
+
+    .navbar-end input {
       outline: none;
       padding-left: 10px;
     }
+
     .fa-solid {
       padding-right: 7px;
     }
@@ -75,9 +82,14 @@
       width: 40%;
       border: solid 1px rgba(29, 29, 29, 0.307);
     }
-    .mobile-btn{
+
+    .mobile-btn {
       display: none;
     }
+
+    /* .row:nth-child(2){
+        flex-direction: column-reverse;
+      } */
     @media screen and (max-width: 576px) {
       .nav-desktop {
         display: none;
@@ -87,6 +99,15 @@
         display: none;
       }
 
+      li form {
+        display: block;
+        margin-top: 7px;
+      }
+
+      li form input {
+        width: 100%;
+      }
+
       .extra {
         display: none;
       }
@@ -94,8 +115,9 @@
       .pc-btn {
         display: none;
       }
-      .mobile-btn{
-         display: block;
+
+      .mobile-btn {
+        display: block;
       }
     }
   </style>
@@ -106,47 +128,60 @@
   <!-- Header Start -->
   <header>
     <div class="navbar bg-base-100 md:bg-[#F85559] rounded-[50px] md:mt-4 w-[97%] mx-auto">
-      <div class="navbar-start">
+      <div class="navbar-start md:w-[59%] lg:w-auto">
         <div class="nav-desktop md:p-2 lg:pl-6 text-white">
-          <ul class="flex md:gap-3 lg:gap-5 cursor-pointer">
+          <ul class="flex md:gap-2 lg:gap-5 cursor-pointer">
             <li><a>Home</a></li>
             <li><a>About Us</a></li>
             <li><a>Shop</a></li>
             <li><a>All Fruits</a></li>
           </ul>
         </div>
-        <div class="dropdown md:hidden">
+        <div class="navbar-center md:hidden relative">
+          <a class="btn btn-ghost normal-case text-xl font-semibold md:text-white"><img class="w-7"
+              src="images/logo.png" />Fruit Burst
+          </a>
+        </div>
+        <!-- Mobile Responsive -->
+        <!-- DropDown Start -->
+        <div class="dropdown md:hidden navbar-end -right-40">
           <label tabindex="0" class="btn btn-ghost btn-circle">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
               stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" />
             </svg>
           </label>
-          <ul tabindex="0"
-            class="menu menu-sm dropdown-content mt-3 sm:z-[1] p-2 shadow bg-base-100 rounded-box w-52 z-20">
-            <li><a>Home</a></li>
-            <li><a>About Us</a></li>
-            <li><a>Shop</a></li>
-            <li><a>All Fruits</a></li>
-          </ul>
+          <div class="flex justify-end">
+            <ul tabindex="0"
+              class="menu menu-sm dropdown-content mt-3 sm:z-[1] p-2 shadow bg-base-100 rounded-box w-52 z-20">
+              <li><a>Home</a></li>
+              <li><a>About Us</a></li>
+              <li><a>Shop</a></li>
+              <li><a>All Fruits</a></li>
+              <li>
+                <form>
+                  <input type="text" placeholder="Search here" />
+                  <button><i class="fa-solid fa-magnifying-glass"></i></button>
+                </form>
+              </li>
+            </ul>
+          </div>
         </div>
+        <!-- DropDown End -->
+        <div class="relative hidden md:block md:-right-3 lg:-right-56">
+          <div class="flex">
+            <a class="btn btn-ghost normal-case text-xl font-semibold md:text-white"><img class="w-7"
+                src="images/logo.png" />Fruit Burst
+            </a>
+          </div>
+        </div>
+        <!-- Mobile Responsive -->
       </div>
-      <div class="navbar-center">
-        <a class="btn btn-ghost normal-case text-xl font-semibold md:text-white"><img class="w-7"
-            src="images/logo.png" />Fruit Burst
-        </a>
-      </div>
-      <div class="navbar-end">
+      <div class="relative md:-right-10 lg:-right-[560px]">
         <form>
           <input type="text" placeholder="Search here" />
           <button><i class="fa-solid fa-magnifying-glass"></i></button>
         </form>
-        <button class="btn btn-ghost btn-circle md:hidden">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-              d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-          </svg>
-        </button>
       </div>
     </div>
   </header>
@@ -360,8 +395,10 @@
               <div class="card-body items-center text-center">
                 <h2 class="card-title">12.90$ - 18.85$</h2>
                 <p>Apple</p>
-                <p class="text-center text-xs pb-5">Professional employees are there for you to pick the most <br>
-                  amazing and fresh fruits</p>
+                <p class="text-center text-xs pb-5">
+                  Professional employees are there for you to pick the most <br />
+                  amazing and fresh fruits
+                </p>
                 <div class="rating mb-2">
                   <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
                   <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
@@ -409,8 +446,10 @@
               <div class="card-body items-center text-center">
                 <h2 class="card-title">12.90$ - 18.85$</h2>
                 <p>Orange</p>
-                <p class="text-center text-xs pb-5">Professional employees are there for you to pick the most <br>
-                  amazing and fresh fruits</p>
+                <p class="text-center text-xs pb-5">
+                  Professional employees are there for you to pick the most <br />
+                  amazing and fresh fruits
+                </p>
                 <div class="rating mb-2">
                   <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
                   <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
@@ -456,8 +495,10 @@
               <div class="card-body items-center text-center">
                 <h2 class="card-title">12.90$ - 18.85$</h2>
                 <p>Dragon</p>
-                <p class="text-center text-xs pb-5">Professional employees are there for you to pick the most <br>
-                  amazing and fresh fruits</p>
+                <p class="text-center text-xs pb-5">
+                  Professional employees are there for you to pick the most <br />
+                  amazing and fresh fruits
+                </p>
                 <div class="rating mb-2">
                   <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
                   <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
@@ -503,8 +544,10 @@
               <div class="card-body items-center text-center">
                 <h2 class="card-title">12.90$ - 18.85$</h2>
                 <p>Bananna</p>
-                <p class="text-center text-xs pb-5">Professional employees are there for you to pick the most <br>
-                  amazing and fresh fruits</p>
+                <p class="text-center text-xs pb-5">
+                  Professional employees are there for you to pick the most <br />
+                  amazing and fresh fruits
+                </p>
                 <div class="rating mb-2">
                   <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
                   <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
@@ -608,7 +651,7 @@
     <!-- Section3 End -->
 
     <!-- Section4 Start -->
-    <section class="container mx-auto mt-20 px-8 py-5 lg:px-0 lg:py-0">
+    <section class="container mx-auto mt-20 px-8 py-5 lg:px-0 lg:mr-[21px] lg:py-0">
       <div class="text-center">
         <h1 class="text-4xl font-bold mb-5">Why Choose Us</h1>
         <p class="text-xs md:text-sm">
@@ -617,58 +660,58 @@
           Latin literature from 45 BC, making it over 2000 years old.
         </p>
       </div>
-      <div class="grid grid-cols-1 md:grid-cols-3 mt-10">
-        <div class="mt-8 text-center md:text-left">
-          <!-- section-4-card -->
-          <div class="flex flex-col lg:flex-row items-center gap-2 mb-8">
-            <div>
-              <i class="fa-solid fa-people-group text-2xl"></i>
+      <div class="flex flex-col lg:flex-row mt-10 md:-mt-24 lg:mt-10">
+        <div class="mt-0 md:mt-40 lg:mt-0 flex flex-col lg:flex-row-reverse">
+          <img class="relative lg:left-24" src="images/whychoose1.png" />
+          <div class="mt-8 text-center md:text-left">
+            <!-- section-4-card -->
+            <div class="flex flex-col lg:flex-row items-center gap-2 mb-8">
+              <div>
+                <i class="fa-solid fa-people-group text-2xl"></i>
+              </div>
+              <div>
+                <h1 class="text-2xl font-bold">Dedicated Team</h1>
+                <hr class="hr1 hr2 relative mx-auto md:-left-[80px]" />
+                <p class="text-xs">
+                  Professional employees are there for you to pick <br />
+                  the most amazing and fresh fruits.
+                </p>
+              </div>
             </div>
-            <div>
-              <h1 class="text-2xl font-bold">Dedicated Team</h1>
-              <hr class="hr1 hr2 relative mx-auto md:-left-[80px]" />
-              <p class="text-xs">
-                Professional employees are there for you to pick <br />
-                the most amazing and fresh fruits.
-              </p>
+            <!-- section-4-card -->
+            <!-- section-4-card -->
+            <div class="flex flex-col lg:flex-row items-center gap-2 mb-8">
+              <div>
+                <i class="fa-solid fa-heart-pulse text-2xl"></i>
+              </div>
+              <div>
+                <h1 class="text-2xl font-bold">Fresh is Best</h1>
+                <hr class="hr1 hr2 relative mx-auto md:-left-[80px]" />
+                <p class="text-xs">
+                  Professional employees are there for you to pick <br />
+                  the most amazing and fresh fruits.
+                </p>
+              </div>
             </div>
+            <!-- section-4-card -->
+            <!-- section-4-card -->
+            <div class="flex flex-col lg:flex-row items-center gap-2 mb-8">
+              <div>
+                <i class="fa-solid fa-gift text-2xl"></i>
+              </div>
+              <div>
+                <h1 class="text-2xl font-bold">Gift Certificates</h1>
+                <hr class="hr1 hr2 relative mx-auto md:-left-[80px]" />
+                <p class="text-xs">
+                  Professional employees are there for you to pick <br />
+                  the most amazing and fresh fruits.
+                </p>
+              </div>
+            </div>
+            <!-- section-4-card -->
           </div>
-          <!-- section-4-card -->
-          <!-- section-4-card -->
-          <div class="flex flex-col lg:flex-row items-center gap-2 mb-8">
-            <div>
-              <i class="fa-solid fa-heart-pulse text-2xl"></i>
-            </div>
-            <div>
-              <h1 class="text-2xl font-bold">Fresh is Best</h1>
-              <hr class="hr1 hr2 relative mx-auto md:-left-[80px]" />
-              <p class="text-xs">
-                Professional employees are there for you to pick <br />
-                the most amazing and fresh fruits.
-              </p>
-            </div>
-          </div>
-          <!-- section-4-card -->
-          <!-- section-4-card -->
-          <div class="flex flex-col lg:flex-row items-center gap-2 mb-8">
-            <div>
-              <i class="fa-solid fa-gift text-2xl"></i>
-            </div>
-            <div>
-              <h1 class="text-2xl font-bold">Gift Certificates</h1>
-              <hr class="hr1 hr2 relative mx-auto md:-left-[80px]" />
-              <p class="text-xs">
-                Professional employees are there for you to pick <br />
-                the most amazing and fresh fruits.
-              </p>
-            </div>
-          </div>
-          <!-- section-4-card -->
         </div>
-        <div class="mt-0 md:mt-40 lg:mt-0">
-          <img src="images/whychoose1.png" />
-        </div>
-        <div class="text-center md:text-right lg:pl-28 mt-7">
+        <div class="text-center md:text-right lg:ml-48 mt-7">
           <!-- section-4-card -->
           <div class="flex flex-col-reverse lg:flex-row items-center gap-2 mb-12">
             <div>
@@ -759,4 +802,5 @@
   </footer>
   <!-- Footer End -->
 </body>
+
 </html>
